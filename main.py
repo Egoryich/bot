@@ -272,7 +272,9 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
 async def add_student(update: Update, context: ContextTypes.DEFAULT_TYPE):
     await update.message.reply_text(
         'Введите имя студента:',
-        reply_markup=ReplyKeyboardRemove()
+        #reply_markup=ReplyKeyboardMarkup([['/start']], resize_keyboard=True)
+        #reply_markup = ReplyKeyboardMarkup(keyboard, resize_keyboard=True)
+
     )
     return ADD_STUDENT
 
@@ -294,7 +296,9 @@ async def save_student(update: Update, context: ContextTypes.DEFAULT_TYPE):
 async def add_subject(update: Update, context: ContextTypes.DEFAULT_TYPE):
     await update.message.reply_text(
         'Введите название предмета:',
-        reply_markup=ReplyKeyboardRemove()
+        #reply_markup=ReplyKeyboardMarkup([['/start']], resize_keyboard=True)
+        #reply_markup = ReplyKeyboardMarkup(keyboard, resize_keyboard=True)
+
     )
     return ADD_SUBJECT
 
